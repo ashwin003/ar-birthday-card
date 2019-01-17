@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <title>Happy Birthday</title>
+
+    <script src="scripts/aframe.min.js"></script>
+    <script src="scripts/aframe-ar.js"></script>
+    <script src="scripts/aframe-text-geometry-component.min.js"></script>
+    <script src="scripts/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene embedded arjs>
+        <a-assets>
+            <!-- Cake made by "Poly by Google" https://poly.google.com/user/4aEd8rQgKu2-->
+            <a-asset-item id="cake" src="assets/cake/Cake_01.gltf"></a-asset-item>
+
+            <!-- Happy birthday text created by "yugvir parhar" https://poly.google.com/user/eNpdBO8mffY -->
+            <a-asset-item id="hbd" src="assets/greetings/GREETINGS.gltf"></a-asset-item>
+
+            <!-- Snitch created by "platyperson" https://sketchfab.com/platyperson -->
+            <a-asset-item id="snitch" src="assets/snitch/scene.gltf"></a-asset-item>
+
+            <!-- WW created by "youssef.abuzied" https://sketchfab.com/youssef.abuzied -->
+            <a-asset-item id="ww" src="assets/ww/scene.gltf"></a-asset-item>
+
+            <!-- optimus created by "kunnatee" https://sketchfab.com/kunnatee -->
+            <a-asset-item id="optimus" src="assets/optimus/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity position='0 -0.5 -2' particle-system="preset:snow;color:#f9e154;particleCount:15000"></a-entity>
+
+        <!-- Open source 3rd party models -->
+        <a-entity gltf-model="#optimus" position='0.1 -1.5 -1.25' scale='0.01 0.01 0.01' rotation='0 -30 0'></a-entity>
+        <a-entity gltf-model="#cake" position='0 -0.5 0' scale='0.1 0.1 0.1'></a-entity>
+        <a-entity gltf-model="#ww" position='0 0.32 0' rotation='-90 0 0' scale='0.1 0.1 0.1'></a-entity>
+        <a-entity gltf-model="#hbd" position='1.75 -1 1.75' scale="0.35 0.35 0.35" rotation='-90 0 35'></a-entity>
+        <a-entity gltf-model="#snitch" position='0 4.5 2.5' scale="0.25 0.25 0.25"></a-entity>
+
+        <a-marker-camera preset='hiro'></a-marker-camera>
+    </a-scene>
+</body>
+
+</html>
